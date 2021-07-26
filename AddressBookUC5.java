@@ -1,11 +1,9 @@
 //package addressbook;
-//import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
-//
 //import java.util.ArrayList;
 //import java.util.Scanner;
-// class AddressBookMainUC4<Contact>
+//public class AddressBookUC5<Contact>
 //{
-//    public ArrayList<Contact> contactbook = new ArrayList<Contact>();      //Arraylist
+//    public ArrayList<Contact> contactbook = new ArrayList<Contact>();
 //    Scanner scan = new Scanner(System.in);
 //    public void addContact()
 //    {
@@ -33,10 +31,10 @@
 //
 //        System.out.println("Enter E-mail");
 //        String email = scan.next();
-//
 //        Contact contact = new Contact(first, last, address, city, state,  email,mobileNo, zip);
 //        contactbook.add(contact);
 //        System.out.println("Contact added Successfully");
+//        System.out.println("You can add multiple person's entry");
 //    }
 //    public void displayPerson()
 //    {
@@ -59,7 +57,7 @@
 //
 //            if (name.equals(person.firstName)) {
 //
-//                System.out.println("Select the option to edit:"
+//                System.out.println("\"Select the option to edit: \n"
 //                        + "1) Mobile no"
 //                        + "2) Email-Id"
 //                        + "3) Address"
@@ -70,15 +68,17 @@
 //                    case 1 : {
 //                        System.out.println("enter new Mobile number:");
 //                        long mobileNo = scan.nextLong();
+//
 //                        person.setMobileNo(mobileNo);
-//                        System.out.println("mobile no. is updated");
+//                        System.out.println("mobile no. is updated\n");
 //                        break;
 //                    }
 //                    case 2 : {
 //                        System.out.println("enter new Email-id:");
 //                        String email = scan.nextLine();
+//
 //                        person.setEmail(email);
-//                        System.out.println("Email-id is updated");
+//                        System.out.println("Email-id is updated\n");
 //                        break;
 //                    }
 //                    case 3 : {
@@ -90,6 +90,7 @@
 //
 //                        System.out.println("enter your zip code");
 //                        int zip = scan.nextInt();
+//
 //                        person.setCity(city);
 //                        person.setState(state);
 //                        person.setZip(zip);
@@ -109,24 +110,25 @@
 //        System.out.println("enter First name to delete details:");
 //        String name = scan.nextLine();
 //
-//            String firstName = " ";
-//            String personName = contactbook.firstName;
+//        for (int i=0; i < contactbook.size(); i++)
+//        {
+//            String personName = contactbook.get(i).firstName;
 //
 //            if (name.equals(personName))
 //            {
-//                contactbook.remove(firstName);
+//                contactbook.remove(i);
 //                System.out.println("this person details is deleted");
-//
+//                break;
 //            }
 //            else
 //                System.out.println("please enter valid name");
 //        }
-//
+//    }
 //
 //    public static void main(String[] args)
 //    {
 //        System.out.println("-------------Welcome To The Address Book Problem--------------------");
-//        AddressBookMainUC4 address = new AddressBookMainUC4();
+//        AddressBookUC5 address = new AddressBookUC5();
 //        Scanner sc = new Scanner(System.in);
 //        System.out.println("1.Add Contact");
 //        System.out.println("2.Edit Contact");
