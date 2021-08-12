@@ -2,6 +2,7 @@ public class Contact {
 
     String firstName;
     String lastName;
+    String address;
     String city;
     String state;
     String email;
@@ -9,9 +10,10 @@ public class Contact {
     int zip;
 
 
-    public Contact(String firstName, String lastName, String city, String state, String email, long mobileNo, int zip) {
+    public Contact(String firstName, String lastName, String address, String city, String state, String email, long mobileNo, int zip) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.address= address;
         this.city = city;
         this.state = state;
         this.email = email;
@@ -34,6 +36,14 @@ public class Contact {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public String getCity() {
@@ -77,7 +87,7 @@ public class Contact {
     }
 
     public String toString() {
-        return "Contact [firstName=" + firstName + ", lastName=" + lastName + ", city=" + city
+        return "Contact [firstName=" + firstName + ", lastName=" + lastName + ", Address="+address+", city=" + city
                 + ", state=" + state + ", pincode=" + zip + ", MobileNo=" + mobileNo + "]" + "\n";
     }
 }
